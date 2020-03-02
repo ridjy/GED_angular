@@ -1,0 +1,17 @@
+<div class="row">
+  <button class="btn btn-info" (click)="isLoggedIn()">is logged in</button>
+  <hr>
+  <div class="row">
+    <input type="text"
+          #infoRef
+    >
+    <button class="btn btn-info" (click)="getNodeInfo(infoRef.value)">Node info</button>
+  </div>
+  <hr>
+  <div class="row">
+    <input type="text"
+          #infoRefChilds
+    >
+    <button class="btn btn-info" (click)="getNodeChilds(infoRefChilds.value)">Node childs</button>
+  </div>
+</div>

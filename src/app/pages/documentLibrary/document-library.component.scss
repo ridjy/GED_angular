@@ -1,0 +1,57 @@
+::ng-deep #simple-treeview, #product-details {
+  display: inline-block;
+  width: 20%;
+  max-width: 12rem;
+}
+dx-tree-view, #simple-treeview {
+  padding-left: 0;
+}
+::ng-deep #product-details {
+  vertical-align: top;
+  width: 400px;
+  height: 420px;
+  margin-left: 20px;
+}
+.w-spacial {
+  width: 100% !important;
+  height: 400px;
+}
+::ng-deep #product-details > img {
+  border: none;
+  height: 300px;
+  width: 400px;
+}
+::ng-deep #product-details > .name {
+  text-align: center;
+  font-size: 20px;
+}
+::ng-deep #product-details > .price {
+  text-align: center;
+  font-size: 24px;
+}
+::ng-deep .dark #product-details > div {
+  color: #f0f0f0;
+}
+::ng-deep .hidden {
+  visibility: hidden;
+}
+.btn {
+  margin: 4px;
+}
+.breadcrumb-item-link {
+  cursor: pointer;
+}
+.widget-controls {
+  padding: 1.5rem 2.5rem;
+}
+
+.document-library {
+  height: 100%;
+}
+
+.nav-tabs {
+  margin-bottom: 10px;
+}
+.nav-item {
+  cursor: pointer;
+}

@@ -1,0 +1,93 @@
+<!--&lt;!&ndash; document library content &ndash;&gt;-->
+<!--<div class="row mb-4">-->
+    <!--<div class="col">-->
+        <!--<div widget class="card border-0 box-shadow">-->
+            <!--&lt;!&ndash; breadcrumb & widget&ndash;&gt;-->
+            <!--<div class="card-header transparent border-0 text-muted">-->
+                <!--<nav class="breadcrumb">-->
+                    <!--<a class="breadcrumb-item breadcrumb-item-link" *ngFor="let item of breadCrump" (click)="previousFolder(item.node)">{{item.name}}</a>-->
+                    <!--<span class="breadcrumb-item active">{{rootName}}</span>-->
+                <!--</nav>-->
+                <!--<div class="widget-controls">-->
+                    <!--<a data-widgster="expand" href="#" class="transition"><i class="fa fa-chevron-down"></i></a>-->
+                    <!--<a data-widgster="collapse" href="#" class="transition"><i class="fa fa-chevron-up"></i></a>-->
+                    <!--<a data-widgster="fullscreen" href="#" class="transition"><i class="fa fa-expand"></i></a>-->
+                    <!--<a data-widgster="restore" href="#" class="transition"><i class="fa fa-compress"></i></a>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--&lt;!&ndash; body content&ndash;&gt;-->
+            <!--<div class="card-body pt-0 widget-body">-->
+                <!--<div class="row">-->
+                    <!--&lt;!&ndash; left nav bar &ndash;&gt;-->
+                    <!--<div class="col-lg-2">-->
+                        <!--<div class="card document-library">-->
+                            <!--<div class="card-body">-->
+                                <!--<dx-tree-view-->
+                                        <!--id="simple-treeview"-->
+                                        <!--[items]="products"-->
+                                        <!--dataStructure="plain"-->
+                                        <!--parentIdExpr="categoryId"-->
+                                        <!--keyExpr="ID"-->
+                                        <!--displayExpr="name"-->
+                                        <!--[width]="300"-->
+                                        <!--(onItemClick)="selectItem($event)"-->
+                                <!--&gt;</dx-tree-view>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash; right content &ndash;&gt;-->
+                    <!--<div class="col-lg-10">-->
+                        <!--<div class="card document-library">-->
+                            <!--<div class="card-body">-->
+                                <!--&lt;!&ndash; menu content 3 category (basic info, metadata, file viewer) &ndash;&gt;-->
+                                <!--<ul class="nav nav-tabs">-->
+                                    <!--<li class="nav-item" (click)="toggleNav('basic-info')">-->
+                                        <!--<a class="nav-link" [ngClass]="{'active': basicInfo}">Basic information</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item" (click)="toggleNav('metadata')">-->
+                                        <!--<a class="nav-link" [ngClass]="{'active': metadataFile}">Metadata</a>-->
+                                    <!--</li>-->
+                                    <!--<li class="nav-item" (click)="toggleNav(null)">-->
+                                        <!--<a class="nav-link" [ngClass]="{'active': fileView}">File viewer</a>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                                <!--&lt;!&ndash; in case basic info &ndash;&gt;-->
+                                <!--<div class="basic-info" *ngIf="basicInfo">-->
+                                    <!--&lt;!&ndash;<div id="product-details" *ngIf="(currentItem) ? currentItem.isFile : false">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<div class="name">{{currentItem.name}}</div>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;</div>&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img *ngIf="(currentItem) ? !currentItem.icon : false" class="card-img-bottom w-100" src="assets/img/app/7.jpg" alt="Card image cap">&ndash;&gt;-->
+                                    <!--&lt;!&ndash;<img *ngIf="(currentItem) ? currentItem.icon : false" class="card-img-bottom w-75" [src]="(currentItem) ? currentItem.icon : false" alt="Card image cap">&ndash;&gt;-->
+                                    <!--<div class="card border-0 overflow-hidden">-->
+                                        <!--<div *ngIf="currentItem">-->
+                                            <!--<img class="card-img w-spacial" [src]="(currentItem.isFile) ? iconsFile.pdf : iconsFile.folder" alt="Card image">-->
+                                            <!--<div class="card-img-overlay overlay-success" *ngIf="fileInformation">-->
+                                                <!--<h5 class="card-title"> File name: {{fileInformation.name}}</h5>-->
+                                                <!--<p class="card-text">Created at : {{fileInformation.createdAt.toString()}}</p>-->
+                                                <!--<p class="card-text">Created by : {{fileInformation.createdByUser.displayName}}</p>-->
+                                                <!--<p class="card-text">File size : {{fileInformation.content.sizeInBytes / 1024}} Kb</p>-->
+                                                <!--<p class="card-text"><small>Last updated : {{fileInformation.modifiedAt.toString()}}</small></p>-->
+                                                <!--<p class="card-text" *ngIf="fileInformation.properties"><small>Description : {{fileInformation.properties}}</small></p>-->
+                                                <!--<p class="card-text" *ngIf="fileInformation.properties"><small>Verision file : {{fileInformation.properties.versionLabel}}</small></p>-->
+                                                <!--<p class="card-text" *ngIf="fileInformation.properties"><small>Verision type : {{fileInformation.properties.version}}</small></p>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; in case metadata &ndash;&gt;-->
+                                <!--<div class="metadata" *ngIf="metadataFile">-->
+                                    <!--<p>this metadata fields</p>-->
+                                <!--</div>-->
+                                <!--&lt;!&ndash; in case file viewer &ndash;&gt;-->
+                                <!--<div class="file-view" *ngIf="fileView">-->
+                                    <!--<p>file view fields</p>-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
